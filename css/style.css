@@ -1,0 +1,30 @@
+body {
+  height: 100vh;
+  background-color: black;
+  margin: 0;
+}
+/*inset: shorthand: top rigth button left*/
+#container {
+  width: 50vh;
+  height: 50vh;
+  margin: auto;
+  position: absolute; /*takes body viewport*/
+  inset: calc(25vh - 1px) 0; /*2 values: top-button right-left */
+  border: 1px solid white;
+}
+/* #container items */
+.figure {
+  width: 20%;
+  height: 20%;
+}
+.circle {
+  position: relative; /*reference  position*/
+  inset: 10% 0 0 10%;
+  background-color: yellow;
+  border-radius: 50%;
+}
+.square {
+  position: absolute; /*square takes circle position reference*/
+  inset: calc(80% - 10px) 10px 10px calc(80% - 10px);
+  background-color: blue;
+}
